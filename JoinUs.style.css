@@ -1,0 +1,191 @@
+body {
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background-color: #5b7745;
+    color: white;
+  }
+
+  .navbar-brand :hover{
+    transform: scale(1.1);
+    cursor: grab;
+    }
+
+    .navbar-brand2 .img {
+      transition: transform 1s ease;
+    }
+    
+    .navbar-brand2 img:hover {
+      transform: scale(1.1);
+    }
+
+
+
+   .opening h1:hover, .emplopyee:hover, .volunteer:hover, .text:hover{
+    text-shadow: 2px 2px 4px  #38452ed5;
+    cursor: pointer;
+  }
+
+  .nav-item1 a{
+    color: white;
+  }
+
+  .nav-item1 a:hover{
+    color: white;
+    cursor: grab;
+  }
+
+  .nav-item1:hover{
+    color: white;
+    text-shadow: 2px 2px 4px  #38452ed5;
+    border:3px solid #febd2e;
+    border-radius: 2%;
+    box-shadow:2px 2px 4px  #38452ed5 ;
+  }
+
+
+  .section-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+h1{
+  font-size: larger;
+  color: white;
+}
+
+h2{
+  font-size: xx-large;
+  color: #febd2e;
+}
+
+
+h3, h4{
+    font-size: x-large;
+    color: #febd2e;
+  }
+
+  h1,h2,h3,h4,h10{
+    font-family: "cooper-black-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+  }
+
+
+
+  p,
+  .col-form-label,
+  .nav-link,
+  .form-check .form-check-label,
+  .submit .btn,
+  .form .form-control
+  ,.donation,
+  .nav .nav-item a {
+    font-family: "baileywick-jf-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  .btn-primary,
+  .form-check-input[type="radio"]:checked,
+  .form-check-input[type="radio"]:checked:before {
+    background-color: #fb6c55;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #fb6c55;
+    transform: translateY(2px); 
+  }
+  
+  .donation {
+    text-align: center;
+    font-size: large;
+  }
+  
+  @media (max-width: 767px) {
+    .donation {
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .donation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+
+.footer{
+    color: white;
+    margin: 0%;
+  }
+
+
+  .float-end a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .float-end:hover {
+    color: #febd2e;
+  }
+
+  h10{
+    color: #febd2e;
+    font-size: larger;
+  }
+
+  .scroll-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s ease-out forwards;
+  }
+  
+  ul{
+    list-style: none;
+  }
+
+  .submit .btn{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+  nav .navbar-brand img {
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+  }
+  
+  @media (max-width: 576px) {
+    nav .navbar-brand img {
+      width: 70px; /* Keep the original width */
+      height: 70px; /* Keep the original height */
+    }
+  }
+
+@media (max-width: 576px) {
+  .navbar-brand2 img {
+    width: 50%; /* Adjust the width as needed */
+  }
+}

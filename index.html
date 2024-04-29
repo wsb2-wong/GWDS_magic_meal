@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="bootstrap.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Magic Meal</title>
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    
+
+
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    
+
+
+    
+    <link rel="stylesheet" href="https://use.typekit.net/uvk8cqm.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pqo1fne.css">
+    <link href="carousel.css" rel="stylesheet">
+    <!-- Place under examples css style sheet -->
+    <link rel="stylesheet" href="homepage.css">
+
+
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <div class="scroll-effect">
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #5b7745;">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="container-fluid">
+          <a class="navbar-brand " href="./index.html">
+            <img src="bootstrap-5.3.3-dist.png" alt="Logo" width="70" height="70">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="color: #febd2e;">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  M+M Homestead Kitchen
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#WHO ARE WE">ABOUT US</a></li>
+                  <li><a class="dropdown-item" href="#OUR MISSION">Our Mission</a></li>
+                  <li><a class="dropdown-item" href="#HOW WE OPERATE">How We Operate</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./menu.index.html">Menu</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./loction.index.html">Location</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./JoinUs.index.html">Join Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+            <script>
+          // Get the toggler button
+          var togglerButton = document.querySelector('.navbar-toggler');
+
+          // Add click event listener to the toggler button
+          togglerButton.addEventListener('click', function() {
+            // Toggle the collapse state of the navbar
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+              navbarCollapse.classList.remove('show');
+            } else {
+              navbarCollapse.classList.add('show');
+            }
+          });
+        </script>
+
+
+
+
+
+
+
+<main>
+
+    <section class="section-one">
+        <h2 class="mon-size card-text mt-5">MAGIC <br> MEAL</h2>
+    </section>
+    
+    <section class="section-two">
+        <p class="card-text mt-4"><strong>At Magic Meal, let's make a deal, where every plate's a happy squeal</p></strong>
+    </section>
+    
+    <section class="section-three">
+        <img src="theme_photo_edit拷貝.jpg" class="card-img mt-5 mb-5"  id="theme-photo">
+    </section>
+
+
+
+
+
+
+    <hr class="mx-5 my-4" style="border-color: #335132; border-width: 4px; ">
+
+
+
+
+    <h2 class="title my-5">
+      <strong>TODAYS SPECIAL "CHICKEN"</strong>
+    </h2>
+  <div class="container marketing ">
+    <div class="row mb-5">
+      <div class="col-lg-4 d-none d-lg-block ">
+        <img src="fried-rice-with-curry-chicken.jpeg" class="bd-placeholder-img1 rounded-circle img-fluid" width="270" height="270" role="img" aria-label="Placeholder" alt="Placeholder Image">
+        <h4 class="fw-normal mt-5"> <strong>FRIED RICE WITH CURRY CHICKEN</strong></h4>
+        <p><strong>$30</strong></p>
+        <p>Thai Spicy Oil Curry Rice, a tantalizing explosion of flavors in every bite.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <img src="chicken-chop-toast.jpeg" class="bd-placeholder-img1 rounded-circle img-fluid" width="330" height="330" role="img" aria-label="Placeholder" alt="Placeholder Image">
+        <h5 class="fw-normal mt-5"><strong>BRITISH STYLE CHICKEN CHOP TOAST</strong></h5>
+        <p><strong>$30</strong></p>
+        <p>Experience culinary bliss with our Thin Toast with Tomato and Lemon Sauce and Chicken. Shock your taste buds today!</p>
+      </div>
+
+      <div class="col-lg-4 d-none d-lg-block">
+        <img src="chicken-soup.webp" class="bd-placeholder-img1 rounded-circle img-fluid" width="270" height="270" role="img" aria-label="Placeholder" alt="Placeholder Image">
+        <h6 class="fw-normal mt-5"><strong>CHICKEN CONSOMM </strong></h6>
+        <p><strong>$22</strong></p>
+        <p>Chicken soup with green onion, lets have a healthy morning.</p>
+      </div>
+
+    </div>
+
+
+
+
+
+    <section class="menu my-5" id="linkToMenu">
+      <a href="./menu.index.html" class="btn btn-primary"
+         style="--bs-btn-padding-y: .75rem; --bs-btn-padding-x: .60rem; --bs-btn-font-size: .75rem;">
+        VIEW DETAILS
+      </a>
+    </section>
+
+
+    <section class="seasonable-menu">
+      <div class="row">
+        <div class="col-12">
+      <h20>WE WILL HAVE SEASONABLE MENU</h20>
+    </div>
+       <div class="col-12"></div>
+      <p class="opacity-75">n every season, we unveil special dishes<br>
+        This summer, sweet meets sour, granting wishes<br>
+        Neutralizing life's sour and bitter strife</p>
+      </div>
+    </div>
+    </section>
+
+    <h12 class="text-center"><strong></strong></h12>
+    <div id="myCarousel" class="carousel slide mb-6 carousel-container" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="position-relative">
+            <img class="bd-placeholder-img img-fluid" width="100%" height="100%" src="janesca-CteaqWgFq3M-unsplash.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div class="container">
+              <div class="carousel-caption">
+                <h15>Sweet and sour pork with pineapple and red pepper</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="position-relative">
+            <img class="bd-placeholder-img img-fluid" width="100%" height="100%" src="janesca-Hj_UGkQ7nNA-unsplash.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div class="container">
+              <div class="carousel-caption">
+                <h15>Beef, Cucumber, and Pumpkin Rice</h15>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="position-relative">
+            <img class="bd-placeholder-img img-fluid" width="100%" height="100%" src="janesca-q0xyYJQNIY0-unsplash.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <div class="container">
+              <div class="carousel-caption">
+                <h15>Pineapple and Red Pepper Chicken Rice</h15>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+      <div class="row-featurette">
+        <div class="col-6" id="WHO ARE WE">
+          <h2 class="featurette-heading fw-normal lh-1">WHO ARE WE</h2>
+          <p class="lead">Hello, we are MIKE and MINDY. 
+            We are now in the process of divesting from a sustainable farming family business.<br>
+            We have started a nonprofit organization (NPO) to help combat food waste created by the local major supermarkets and distributors in their area.</p>
+        </div>
+        <div class="mikemindy col-6 d-flex align-items-center justify-content-center">
+          <img src="young adults.jpeg" class="Mike&Mindy img-fluid" id="profile-image">
+        </div>
+      </div>
+
+
+
+
+
+      <hr class="mx-5 my-4" style="border-color: #335132; border-width: 4px; ">
+      
+      <div class="row mt-5">
+        <div class="col-sm-6" id="OUR MISSION">
+          <div class="card">
+            <img src="trading_food.jpg" class="card-img-top" alt="Market">
+            <div class="card-body">
+              <h5 class="card-title">OUR MISSION</h5>
+              <p class="card-text"><strong>"Pay As You Feel"</strong><br>
+                We divert food waste into a sustainable restaurant situation where people can pay if they can, and if they are unable, they can still get a meal of nourishing food for themselves and their family.<br>
+                Our goal is to bring nourishing food to struggling individuals and families while preserving dignity and autonomy for the individual.<br>
+                <a href="./JoinUs.index.html" class="btn btn-primary mt-3"
+                  style="--bs-btn-padding-y: .75rem; --bs-btn-padding-x: .60rem; --bs-btn-font-size: .75rem;">
+                  Let's Join Us
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-sm-6" id="HOW WE OPERATE">
+          <div class="card">
+            <img src="work together.jpeg" class="card-img-top" alt="Market">
+            <div class="card-body">
+              <h5 class="card-title">HOW WE OPERATE</h5>
+              <p class="card-text">Working with the local supermarkets and distributors, we will make a changeable daily menu using diverted fresh food and other foodstuffs that would otherwise go to the landfill.<br>
+                We have started a “pay as you feel” food box that is full of fresh, diverted food from the grocery stores and farmers markets available from select pick-up locations within the city on certain days.<br>
+                <a href="./loction.index.html" class="btn btn-primary mt-3"
+                  style="--bs-btn-padding-y: .75rem; --bs-btn-padding-x: .60rem; --bs-btn-font-size: .75rem;">
+                  Where is the food box
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+    <hr class="mx-5 my-4" style="border-color: #335132; border-width: 4px; ">
+
+
+
+
+
+      <footer class="footer mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <a class="navbar-brand2 " href="./index.html">
+                <img src="Restaurant_second_logo.png" alt="Logo" width="70" height="70">
+              </a>
+              <ul>
+                <li class="nav-item-footer">
+                  <a class="nav-link" href="./menu.index.html">Menu</a>
+                </li>
+  
+                <li class="nav-item-footer">
+                  <a class="nav-link" href="./loction.index.html">Location</a>
+                </li>
+                <li class="nav-item-footer">
+                  <a class="nav-link" href="./JoinUs.index.html">Join Us</a>
+                </li>
+              </ul>
+            </div>
+      
+            <div class="col-8">
+              <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-4  text-end">
+                  <h13>Locations</h13>
+                  <p>New City Plaza<br>
+                    2nd Floor, Shop 203<br>
+                    18-19 Shatin Street<br>
+                    Shatin,<br>
+                    Hong Kong</p>
+                </div>
+      
+                <div class="col-sm-6 col-md-4 col-lg-4 text-end">
+                  <h13>Hours</h13>
+                  <p>Sun:CLOSED<br>
+                    Mon to Fri: 9 AM - 10 PM<br>
+                    Sat: 10 AM - 8 PM</p>
+                </div>
+      
+                <div class="col-sm-6 col-md-4 col-lg-4 text-end">
+                  <h13>FIND US</h13>
+                  <p>+852 2254 9962<br>
+                    minmik@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p><small>&copy; 2022–2024 Company, Inc. </p>
+          </ul>
+        </div> 
+      </footer>
+
+
+
+
+
+
+</main>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
