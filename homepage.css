@@ -13,8 +13,6 @@
     }
   
 
-
-
     .section-one .card-text:hover {
       text-shadow: 2px 2px 4px  #38452ed5;
       cursor: pointer;
@@ -170,6 +168,11 @@ h15{
   border-radius: 10%;
 }
 
+h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 h3{
   display: flex;
@@ -300,6 +303,10 @@ h7,h8,h9,h10,h11,h12{
   h13{
     color: #febd2e;
     font-size: larger;
+  }
+
+  h13 p a{
+    color: #fff;
   }
 
   .carousel-caption {

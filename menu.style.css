@@ -136,8 +136,8 @@
   }
 
 
-  .col-7,
-  .col-5 {
+  .col-8,
+  .col-4 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,9 +164,17 @@
     color: #febd2e;
   }
   
+  h2 p{
+    font-size: medium;
+  }
+
   h3{
     color: #febd2e;
     font-size: larger;
+  }
+
+  h3 p a{
+    color: rgb(255, 255, 255);
   }
 
   .scroll-effect {

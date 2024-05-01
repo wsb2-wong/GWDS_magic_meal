@@ -97,6 +97,10 @@
     font-size: larger;
   }
 
+  h3 p a{
+    color: rgb(255, 255, 255);
+  }
+
   .scroll-effect {
     opacity: 0;
     transform: translateY(20px);

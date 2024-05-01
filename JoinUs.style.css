@@ -75,7 +75,9 @@ h3, h4{
     font-size: x-large;
   }
 
-
+  h3 p a{
+    color: rgb(255, 255, 255);
+  }
 
   p,
   .col-form-label,
